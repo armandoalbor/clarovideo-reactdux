@@ -1,0 +1,131 @@
+
+.main-container-movie {
+    padding: 10px;
+    min-height: 500px;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.movie-detail {
+    position: relative;
+    width: calc(100% - 20px);
+    height: 500px;
+    opacity: 1;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.container-cover {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: no-repeat center center fixed;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*********************  Movie details information ******************/
+.movie-details {
+    max-width: calc(50% - 20px);
+    height: 400px;
+    color: white;
+    padding: 10px;
+    float: right;
+}
+
+.image-n {
+    min-width: calc(48%);
+    height: 380px;
+    margin-top: 30px;
+    display: inline-block;
+    cursor: pointer;
+    box-shadow: 0 1px 10px rgba(34, 34, 34, 0.8);
+}
+
+
+@media (max-width: 900px) {
+    .container-cover {
+        display: none;
+    }
+    .image-n {
+        display: block;
+        margin-top: 0;
+    }
+    .movie-details{
+        max-width: calc(100% - 20px);
+        position: relative;
+        height: auto;
+        float: none;
+    }
+}
+
+
+.movie-details .details-title {
+    font-weight: bold;
+    font-size: 16px
+}
+
+.movie-details .movie-description {
+    font-weight: normal;
+    font-size: 14px
+}
+
+.movie-details .genre-details {
+    font-weight: normal;
+    font-size: 16px
+}
+
+.person-details {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.person-details .person {
+    border: 1px solid #eeeeee;
+    font-size: 12px;
+    padding: 4px;
+    margin: 3px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.person-details .person:hover {
+    box-shadow: 0 3px 4px rgba(123, 121, 127, 0.67);
+}
+
+.social-icons {
+    height: 80px;
+}
+
+.social-icons .item {
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.social-icons .item .icon {
+    line-height: 60px;
+    font-size: 20px;
+    box-sizing: content-box;
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.social-icons .item .icon:hover {
+    box-shadow: 0 4px 10px rgba(123, 121, 127, 0.67);
+}
+
+.social-icons .item .text {
+    line-height: 20px;
+    font-size: 14px;
+}

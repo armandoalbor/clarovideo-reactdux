@@ -1,0 +1,35 @@
+.movie-item img {
+    background-color: #e8e2e2;
+    height: 160px;
+    -webkit-transition: background 1s ease;
+    transition: background 1s ease;
+}
+
+.movie-item .preview {
+    background-color: rgba(29, 29, 29, 0.8);
+    position: absolute;
+    height: 160px;
+    width: 100%;
+    opacity: 0;
+
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+
+.movie-item .preview span {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.movie-item .preview span .icon  {
+    text-align: center;
+    font-size: 70px;
+    color: #eeeeee;
+    padding-top: 50px;
+}
+
+.movie-item .preview:hover {
+    opacity: 1;
+    cursor: pointer;
+}

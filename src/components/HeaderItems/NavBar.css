@@ -1,0 +1,31 @@
+.navbar-nav {
+    border-bottom: 1px solid rgba(120, 120, 120, 0.55);
+}
+
+.navbar-nav li {
+    display: inline-block;
+    padding: 20px 10px 5px 10px;
+    cursor: pointer;
+    height: 25px;
+    box-sizing: padding-box;
+}
+
+.navbar-nav li:hover {
+    border-bottom: 2px solid rgba(213, 213, 213, 0.95);
+}
+
+.navbar-nav li a {
+    color:white;
+}
+
+
+@media (max-width: 64em) {
+    .navbar-nav {
+        padding: 5px;
+    }
+
+    .navbar-nav li {
+        display: inline-block;
+        padding: 0 5px 5px 10px;
+    }
+}

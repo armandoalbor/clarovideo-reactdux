@@ -1,0 +1,40 @@
+.App {
+    text-align: center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+.menu-container {
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.menu-container .logo {
+    width: 220px;
+    height: 50px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.main-container {
+    width: 100%;
+}
+
+.movies-container {
+    width: calc(100% - 60px);
+    padding: 20px 0;
+}
+
+
+@media (max-width: 64em) {
+    .movies-container {
+        width: calc(100% - 10px);
+        padding: 10px 10px;
+    }
+}
