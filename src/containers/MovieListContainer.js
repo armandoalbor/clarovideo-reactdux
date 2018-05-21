@@ -19,9 +19,13 @@ class MovieListContainer extends Component {
     };
 
     render() {
+        const movies = this.props.filteredMovies;
+
         return (
-            <MovieList movies={this.props.filteredMovies}
-                          onSelectedMovie={this.handleSelectedMovie} />
+                movies.length > 0 ?
+                    <MovieList movies={movies}
+                               onSelectedMovie={this.handleSelectedMovie} />  :
+                <h2 className={'no-data'}>No se han obtenido resultados para tu busqueda . . . </h2>
         );
     }
 }
