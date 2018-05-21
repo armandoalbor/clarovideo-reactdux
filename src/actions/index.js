@@ -38,8 +38,21 @@ export const setMovieFilteredData = payload => {
         }
         else {
 
-            const searchMovie = payload.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"");
-            const moviesMatched = movies.filter(movie => movie.title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"").includes(searchMovie));
+            const searchTerm = payload.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"");
+            //const moviesMatched = movies.filter(movie => movie.title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"").includes(searchMovie));
+
+            const moviesMatched = movies.filter(movie => {
+                //let filterMovie = movie.title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"").includes(searchTerm);
+                let filterMovie = '';
+
+                if(!filterMovie) {
+                    return movie.rating_code.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"").includes(searchTerm);
+                }
+
+                return filterMovie;
+            });
+
+
             dispatch(setMovieFilteredListData(moviesMatched));
         }
     }
