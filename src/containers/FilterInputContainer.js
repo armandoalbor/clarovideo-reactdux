@@ -2,16 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
 
-// import { getMovies } from '../reducers';
 import FilterInput from '../components/HeaderItems/FilterInput';
 import { setMovieFilteredData, setFilter } from '../actions';
 import { getFilter } from '../reducers';
-
-/*
-import { getListMovies } from '../reducers';
-import { getMovie } from '../reducers';
-import MovieList from "../components/MovieList";
-*/
 
 class FilterInputContainer extends Component {
 

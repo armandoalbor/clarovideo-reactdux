@@ -37,7 +37,9 @@ export const setMovieFilteredData = payload => {
             return dispatch(setMovieFilteredListData(movies));
         }
         else {
-            const moviesMatched = movies.filter(movie => movie.title.toLowerCase().includes(payload.toLowerCase()));
+
+            const searchMovie = payload.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"");
+            const moviesMatched = movies.filter(movie => movie.title.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,"").includes(searchMovie));
             dispatch(setMovieFilteredListData(moviesMatched));
         }
     }
